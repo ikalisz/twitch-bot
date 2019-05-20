@@ -64,6 +64,18 @@ function onMessageHandler (target, context, msg, self) {
     if (commandName === '!hello') {
         client.say(target, `Hello there (Nev told me not to put uwus in sorry)`)
     }
+
+    if (commandName === '!discord') {
+        client.say(target, 'The discord link is https://discord.gg/t2zaCAx please be respectful in the discord!')
+    }
+
+    if (commandName === '!help') {
+        client.say(target, 'The current commands are: !help, !discord, !hello, !requestsong and mod commands.')
+    }
+
+    if (commandName === "!requestsong") {
+        client.say(target, 'To request a song do !*songrequest (youtube link) without the * and ().')
+    }
 }
 
 
@@ -72,6 +84,6 @@ function onMessageHandler (target, context, msg, self) {
 
 function onConnectedHandler (addr, port) {
     console.log(`connected on to ${addr}:${port}`)
-    client.say('nevrbot', 'You did it! PogChamp')
+    client.say('nevrbot', 'Hello! VoHiYo')
 }
 
