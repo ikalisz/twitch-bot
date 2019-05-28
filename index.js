@@ -6,11 +6,11 @@ const { BOT_USERNAME, OAUTH_TOKEN, CHANNEL_NAME } = process.env
 
 const opts = {
     identity: {
-        username: 'missilesquidTestBot',
-        password: 'pyk0dnt3um1wacqfwqba614zyo5vfh'
+        username: BOT_USERNAME,
+        password: OAUTH_TOKEN
     },
     channels: [
-        'nevrbot'
+        CHANNEL_NAME
     ]
 }
 
@@ -62,7 +62,7 @@ function onMessageHandler (target, context, msg, self) {
     }
 
     if (commandName === '!hello') {
-        client.say(target, `Hello there (Nev told me not to put uwus in sorry)`)
+        client.say(target, `Hello there!`)
     }
 
     if (commandName === '!discord') {
